@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .navbar {
+    position: fixed;
+    top:0;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    overflow: hidden;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    max-width:100%;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-size: 2em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a.hovered {
+    color: gray;
+  }
+  
+  .scrolled .logo {
+    font-size: 1.5em;
+  }
+  
+  .scrolled .container {
+    padding: 10px 20px;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .container {
+      padding: 15px 30px;
+    }
+  
+    .logo {
+      font-size: 1.8em;
+    }
+  
+    nav ul li a {
+      font-size: 0.9em;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 20px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+    }
+  
+    nav ul li {
+      width: 100%;
+    }
+  
+    nav ul li a {
+      font-size: 1.2em;
+      padding: 10px 20px;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .container {
+      padding: 8px 15px;
+    }
+  
+    .logo {
+      font-size: 1.5em;
+    }
+  
+    nav ul li a {
+      font-size: 1em;
+    }
+  }
+
+
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn-login,
+  .btn-signup {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn-login {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .btn-login:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-signup {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .btn-signup:hover {
+    background-color: #218838;
+  }
