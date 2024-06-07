@@ -22,7 +22,7 @@ const Signup = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post('http://localhost:3000/api/createuser', formData, {
+            const response = await axios.post('https://savoury-sip-backend5.onrender.com/api/createuser', formData, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

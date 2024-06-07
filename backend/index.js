@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
 const dbUrl= process.env.ATLAS_URL;
-const PORT= process.env.PORT || 3000; 
+const PORT= process.env.PORT || 3000;
 app.use(cors());
 main().then(()=>{
     console.log('DB is connected');
