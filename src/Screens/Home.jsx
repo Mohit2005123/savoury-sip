@@ -11,7 +11,7 @@ function Home() {
     const [foodItem, setFoodItem] = useState([]);
 
     const loadData = async () => {
-        let res = await axios.get('http://localhost:3000/api/foodData');
+        let res = await axios.get('https://savoury-sip-backend5.onrender.com/api/foodData');
         setFoodItem(res.data[0]);
         setFoodCategory(res.data[1]);
     }
