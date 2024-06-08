@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import './Signup.css';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import MyNavbar from '../components/Navbar';
-
+import { Link, useNavigate } from 'react-router-dom';
 const Signup = () => {
     const [formData, setFormData] = useState({
         name: '',
