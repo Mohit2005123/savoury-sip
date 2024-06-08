@@ -3,13 +3,16 @@ import './Signup.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import MyNavbar from '../components/Navbar';
+
 const Signup = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         password: '',
-        location:''
+        location: ''
     });
+
+    const [error, setError] = useState('');
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -28,19 +31,26 @@ const Signup = () => {
                 }
             });
             console.log(response.data);
+            setError(''); // Clear any previous error messages
+            // Optionally, redirect the user to the login page or another page
         } catch (error) {
             console.error(error);
-            alert('Enter valid credentials');
+            if (error.response && error.response.data && error.response.data.error) {
+                setError(error.response.data.error);
+            } else {
+                setError('Something went wrong. Please try again.');
+            }
         }
     };
 
     return (
         <section>
-             <div><MyNavbar></MyNavbar></div>
+            <div><MyNavbar /></div>
             <div className="form-box">
                 <div className="form-value">
                     <form onSubmit={handleSubmit}>
                         <h2>Sign Up</h2>
+                        {error && <p className="error">{error}</p>}
                         <div className="inputbox">
                             <input
                                 type="text"
