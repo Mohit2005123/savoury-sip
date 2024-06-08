@@ -1,0 +1,51 @@
+.customer-service-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.customer-service-container h1,
+.customer-service-container h2,
+.customer-service-container h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-section,
+.faq-section,
+.support-resources-section {
+    margin-bottom: 20px;
+}
+
+.contact-section p,
+.faq-section p,
+.support-resources-section p {
+    font-size: 16px;
+    color: #555;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    margin-bottom: 5px;
+}
+
+.support-resources-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.support-resources-section li {
+    margin-bottom: 5px;
+}
+
+.support-resources-section a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.support-resources-section a:hover {
+    text-decoration: underline;
+}

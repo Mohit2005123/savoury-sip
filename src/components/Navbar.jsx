@@ -35,10 +35,12 @@ function MyNavbar() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav>
+            <Nav.Link as={Link} to='/aboutOwner'>
+            About Us
+            </Nav.Link>
+          </Nav>
           <Nav className="me-auto">
-           
-            
-           
             {localStorage.getItem('authToken') ? (
               <Nav.Link as={Link} to="/myOrder">
                 {' '}

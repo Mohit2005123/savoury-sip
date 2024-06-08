@@ -8,6 +8,7 @@ import Login from "./Screens/Login";
 import Signup from "./Screens/Signup.jsx";
 import { CartProvider } from "./components/ContextReducer.jsx";
 import MyOrder from "./Screens/MyOrder.jsx";
+import AboutOwner from "./Screens/AboutOwner.jsx";
 function App() {
 
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/login" element={<Login></Login>}></Route>
          <Route exact path='/createuser' element={<Signup></Signup>}></Route>
          <Route exact path='/myOrder' element={<MyOrder></MyOrder>}></Route>
+         <Route exact path='/aboutOwner' element={<AboutOwner></AboutOwner>}></Route>
         </Routes>
       </div>
     </Router>
