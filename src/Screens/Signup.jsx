@@ -33,7 +33,7 @@ const Signup = () => {
             console.log(response.data);
             setError(''); // Clear any previous error messages
             // Optionally, redirect the user to the login page or another page
-            loginUser();
+            loginUser({email: formData.email, password:formData.password});
         } catch (error) {
             console.error(error);
             if (error.response && error.response.data && error.response.data.error) {
@@ -43,7 +43,7 @@ const Signup = () => {
             }
         }
     };
-    const loginUser = async () => {
+    const loginUser = async (formData) => {
         try {
             const response = await axios.post('https://savoury-sip-backend5.onrender.com/api/loginuser', formData, {
                 headers: {
