@@ -33,6 +33,7 @@ const Signup = () => {
             console.log(response.data);
             setError(''); // Clear any previous error messages
             // Optionally, redirect the user to the login page or another page
+            loginUser();
         } catch (error) {
             console.error(error);
             if (error.response && error.response.data && error.response.data.error) {
@@ -40,6 +41,25 @@ const Signup = () => {
             } else {
                 setError('Something went wrong. Please try again.');
             }
+        }
+    };
+    const loginUser = async () => {
+        try {
+            const response = await axios.post('https://savoury-sip-backend5.onrender.com/api/loginuser', formData, {
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            console.log(response.data);
+            if(response.data.success== true){
+                localStorage.setItem('authToken', response.data.authToken);
+                localStorage.setItem('userEmail', formData.email);
+                console.log(localStorage.getItem('authToken'));
+                navigate('/');
+            }
+        } catch (error) {
+            console.error(error);
+            alert('Enter valid credentials');
         }
     };
 
